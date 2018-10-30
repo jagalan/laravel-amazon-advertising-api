@@ -1,0 +1,43 @@
+{
+    "name": "jagalan/laravelamazonadvertisingapi",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan A. Galan",
+            "email": "juan.galan.martinez@gmail.com",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/jagalan/laravelamazonadvertisingapi",
+    "keywords": ["Laravel", "LaravelAmazonAdvertisingApi"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jagalan\\LaravelAmazonAdvertisingApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jagalan\\LaravelAmazonAdvertisingApi\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jagalan\\LaravelAmazonAdvertisingApi\\LaravelAmazonAdvertisingApiServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAmazonAdvertisingApi": "Jagalan\\LaravelAmazonAdvertisingApi\\Facades\\LaravelAmazonAdvertisingApi"
+            }
+        }
+    }
+}
