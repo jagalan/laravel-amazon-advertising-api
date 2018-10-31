@@ -13,7 +13,8 @@
     "keywords": ["Laravel", "Amazon", "Advertising", "API"],
     "require": {
         "illuminate/support": "~5",
-        "luchianenco/oauth2-amazon": "^1.1"
+        "luchianenco/oauth2-amazon": "^1.1",
+        "guzzlehttp/guzzle": "^6.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
