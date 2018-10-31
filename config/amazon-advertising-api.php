@@ -2,9 +2,11 @@
 
 return [
     'app' => [
-        'CLIENT_ID' => 'YOUR_CLIENT_ID',
-        'CLIENT_SECRET' => 'YOUR_CLIENT_SECRET',
-        'RETURN_URL' => 'YOUR_RETURN_URL',
-        'REFRESH_TOKEN' => 'YOUR_REFRESH_TOKEN'
+        'clientId' => 'YOUR_CLIENT_ID',
+        'clientSecret' => 'YOUR_CLIENT_SECRET',
+        'returnUrl' => 'YOUR_RETURN_URL',
+        'refreshToken' => 'YOUR_REFRESH_TOKEN',
+        'region' => 'na',
+        'sandbox' => false,
     ],
 ];

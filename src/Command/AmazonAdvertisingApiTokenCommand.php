@@ -35,7 +35,8 @@ class AmazonAdvertisingApiTokenCommand extends Command {
             'redirectUri'       => $config['app']['RETURN_URL'],
         ]);
 
-        $authorizationUrl = $provider->getAuthorizationUrl();
+        $authorizationUrl = $provider->getAuthorizationUrl(['scope' => 'cpc_advertising:campaign_management']);
+
         $this->line(sprintf(
             "Log into the Login with Amazon account and open the following URL:\n%s",
             $authorizationUrl

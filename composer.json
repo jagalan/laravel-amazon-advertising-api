@@ -14,7 +14,7 @@
     "require": {
         "illuminate/support": "~5",
         "luchianenco/oauth2-amazon": "^1.1",
-        "guzzlehttp/guzzle": "^6.0"
+        "amzn/amazon-advertising-api-php-sdk": "master"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
@@ -41,5 +41,11 @@
                 "LaravelAmazonAdvertisingApi": "Jagalan\\AmazonAdvertisingApi\\Facades\\AmazonAdvertisingApi"
             }
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/amzn/amazon-advertising-api-php-sdk"
+        }
+    ]
 }
