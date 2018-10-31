@@ -1,16 +1,16 @@
 {
-    "name": "jagalan/laravelamazonadvertisingapi",
-    "description": ":description",
+    "name": "jagalan/laravel-amazon-advertising-api",
+    "description": "Amazon advertising API for Laravel.",
     "license": "MIT",
     "authors": [
         {
             "name": "Juan A. Galan",
             "email": "juan.galan.martinez@gmail.com",
-            "homepage": "author homepage"
+            "homepage": "https://github.com/jagalan"
         }
     ],
-    "homepage": "https://github.com/jagalan/laravelamazonadvertisingapi",
-    "keywords": ["Laravel", "LaravelAmazonAdvertisingApi"],
+    "homepage": "https://github.com/jagalan/laravel-amazona-dvertising-api",
+    "keywords": ["Laravel", "Amazon", "Advertising", "API"],
     "require": {
         "illuminate/support": "~5"
     },
@@ -22,21 +22,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Jagalan\\LaravelAmazonAdvertisingApi\\": "src/"
+            "Jagalan\\AmazonAdvertisingApi\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jagalan\\LaravelAmazonAdvertisingApi\\Tests\\": "tests"
+            "Jagalan\\AmazonAdvertisingApi\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jagalan\\LaravelAmazonAdvertisingApi\\LaravelAmazonAdvertisingApiServiceProvider"
+                "Jagalan\\AmazonAdvertisingApi\\AmazonAdvertisingApiServiceProvider"
             ],
             "aliases": {
-                "LaravelAmazonAdvertisingApi": "Jagalan\\LaravelAmazonAdvertisingApi\\Facades\\LaravelAmazonAdvertisingApi"
+                "LaravelAmazonAdvertisingApi": "Jagalan\\AmazonAdvertisingApi\\Facades\\AmazonAdvertisingApi"
             }
         }
     }
