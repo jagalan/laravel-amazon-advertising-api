@@ -13,9 +13,20 @@ Via Composer
 
 ``` bash
 $ composer require jagalan/laravelamazonadvertisingapi
+
 ```
 
+##### Publish the package's configuration file to the application's own config directory.
+
+```
+php artisan vendor:publish --provider="Jagalan\AmazonAdvertisingApi\AmazonAdvertisingApiServiceProvider" --tag="config"
+```
+
+The above command will generate a new file under your laravel app config folder called `google-ads.php`
+
 ## Usage
+
+Get an Amazon API account as described in here: https://advertising.amazon.com/API/docs/v2/guides/account_setup
 
 ## Change log
 

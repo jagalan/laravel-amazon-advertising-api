@@ -3,6 +3,7 @@
 namespace Jagalan\AmazonAdvertisingApi;
 
 use Illuminate\Support\ServiceProvider;
+use Jagalan\AmazonAdvertisingApi\Command\AmazonAdvertisingApiTokenCommand;
 
 class AmazonAdvertisingApiServiceProvider extends ServiceProvider
 {
@@ -13,6 +14,16 @@ class AmazonAdvertisingApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        /*$source = dirname(__DIR__).'/config/amazon-advertising-api.php';
+
+        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+            $this->publishes([$source => config_path('amazon-advertising-api.php')]);
+        } elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('amazon-advertising-api');
+        }
+
+        $this->mergeConfigFrom($source, 'amazon-advertising-api');*/
+
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
@@ -27,6 +38,10 @@ class AmazonAdvertisingApiServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/amazon-advertising-api.php', 'amazon-advertising-api');
+        // Console commands
+        $this->commands([
+            AmazonAdvertisingApiTokenCommand::class,
+        ]);
 
         // Register the service the package provides.
         $this->app->singleton('amazonadvertisingapi', function ($app) {
@@ -54,6 +69,6 @@ class AmazonAdvertisingApiServiceProvider extends ServiceProvider
         // Publishing the configuration file.
         $this->publishes([
             __DIR__.'/../config/amazon-advertising-api.php' => config_path('amazon-advertising-api.php'),
-        ], 'amazon-advertising-api.config');
+        ], 'config');
     }
 }

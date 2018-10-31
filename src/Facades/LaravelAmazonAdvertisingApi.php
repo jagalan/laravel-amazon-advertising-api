@@ -1,10 +1,10 @@
 <?php
 
-namespace Jagalan\LaravelAmazonAdvertisingApi\Facades;
+namespace Jagalan\AmazonAdvertisingApi\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class LaravelAmazonAdvertisingApi extends Facade
+class AmazonAdvertisingApi extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class LaravelAmazonAdvertisingApi extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravelamazonadvertisingapi';
+        return 'amazonadvertisingapi';
     }
 }
